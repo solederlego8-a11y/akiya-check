@@ -25,6 +25,9 @@
       data._subject = form.dataset.subject || 'Akiya Check';
       data._captcha = 'false';
       data._template = 'table';
+      if (data.email) data._replyto = data.email;
+      // 自動返信（チェックリスト配布など）。フォームの data-autoresponse に本文を持つ
+      if (form.dataset.autoresponse) data._autoresponse = form.dataset.autoresponse;
       btn.disabled = true; btn.textContent = 'Sending…';
       try {
         const res = await fetch(endpoint, { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify(data) });
