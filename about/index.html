@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- ga4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KQ4656R9XE"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-KQ4656R9XE', { anonymize_ip: true });
+</script>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About Akiya Check – Who runs it, what data we use, and how a report is scored</title>
+<meta name="description" content="Akiya Check is an independent, English-language risk report service for Japanese property listings. This page explains who operates it, which official datasets each check comes from, how OK / CAUTION / RISK / UNKNOWN are decided, what the report cannot tell you, and our refund rule.">
+<link rel="canonical" href="https://solederlego8-a11y.github.io/akiya-check/about/">
+<meta property="og:title" content="About Akiya Check – data sources, scoring method, limits">
+<meta property="og:description" content="Who operates Akiya Check, which official datasets each check uses, how scores are decided, and what the report cannot tell you.">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"AboutPage","name":"About Akiya Check","url":"https://solederlego8-a11y.github.io/akiya-check/about/","publisher":{"@type":"Organization","name":"Akiya Check","url":"https://solederlego8-a11y.github.io/akiya-check/"}}
+</script>
+</head>
+<body>
+<header class="site"><div class="wrap">
+  <a class="logo" href="../" title="Akiya (空き家) = empty house in Japanese">Akiya<span>Check</span></a>
+  <nav class="main"><a href="../#how">How it works</a><a href="../#pricing">Pricing</a><a href="../blog/">Blog &amp; Guides</a><a href="./">About</a><a class="cta" href="../checklist/">Free checklist</a></nav>
+</div></header>
+
+<section><div class="wrap article">
+  <p class="meta">About · Methodology · Updated 2026-09-18</p>
+  <h1>About Akiya Check</h1>
+  <p>Akiya Check turns a Japanese property listing into an English risk report built from Japan's official zoning, hazard and transaction datasets. This page is the long version of "who are you and where does the data come from" — written so you can judge for yourself how much to trust a report.</p>
+
+  <h2>Who runs it</h2>
+  <p>Akiya Check is operated by <strong>Follows</strong>, a small independent publisher based in Japan that also runs Japanese-language consumer sites. We are <strong>not a real-estate agent, broker, or developer</strong>, we do not list properties, and we receive no referral fees from sellers or agents. The only revenue from this site is the report price. Legal identity and business details are on the <a href="../legal/#tokushoho">特定商取引法に基づく表記</a> (the disclosure required under Japan's Act on Specified Commercial Transactions).</p>
+  <p>The service started in September 2026. We say this plainly because "500+ reports delivered" style badges are easy to fake and we would rather earn trust by showing our method.</p>
+
+  <h2>Where each check comes from</h2>
+  <p>Every line in a report is either read from an official dataset at the lot's coordinates, or extracted from the listing text. The table shows which is which.</p>
+  <table class="checks">
+    <tr><th>Check</th><th>Source</th><th>How we get it</th></tr>
+    <tr><td>Geocoding of the address</td><td>Geospatial Information Authority of Japan (国土地理院, GSI) geocoding</td><td>Address → coordinates. If the listing gives only a town/chōme, the report says so and the hazard checks are marked as area-level, not lot-level.</td></tr>
+    <tr><td>Land-use zone, building-coverage and floor-area ratios (用途地域・建蔽率・容積率)</td><td>MLIT Real Estate Information Library (国土交通省 不動産情報ライブラリ) API</td><td>Queried at the coordinates.</td></tr>
+    <tr><td>City-planning area division / urbanization control area (区域区分・市街化調整区域)</td><td>MLIT Real Estate Information Library</td><td>Queried at the coordinates; cross-checked against the listing text.</td></tr>
+    <tr><td>Flood depth, tsunami inundation, landslide warning zones, liquefaction tendency, disaster hazard districts</td><td>MLIT Real Estate Information Library hazard layers (the same designations shown on the GSI Hazard Map Portal)</td><td>Queried at the coordinates. "Not inside a designated zone" means exactly that — not "safe".</td></tr>
+    <tr><td>Nearby transaction prices, population trend</td><td>MLIT Real Estate Information Library (取引価格情報・人口データ)</td><td>Queried for the surrounding area to give price and demand context.</td></tr>
+    <tr><td>Rebuilding prohibited (再建築不可), road frontage (接道), setback, leasehold (借地権), disclosure matters (告知事項), septic tank (浄化槽), gas type, akiya-bank status, year built</td><td>The listing text</td><td>Parsed for the Japanese terms. If the listing does not mention an item, it is marked <strong>UNKNOWN</strong> and the report gives you the Japanese question to ask the agent. We never infer these from other data.</td></tr>
+    <tr><td>Acquisition costs, fixed asset tax</td><td>Rule-of-thumb formulas based on the listed price and standard Japanese tax rates</td><td>Clearly labeled as estimates; the actual tax uses the assessed value, which is not public.</td></tr>
+  </table>
+
+  <h2>How a score is decided</h2>
+  <p>Each item gets one of four labels. The rules are deterministic — no language model decides whether a lot is 再建築不可.</p>
+  <ul>
+    <li><strong>OK</strong> — the source states a condition with no known downside (e.g. freehold, public sewer, not inside a designated hazard zone).</li>
+    <li><strong>CAUTION</strong> — a condition that changes cost or effort but is common and manageable (e.g. septic tank, propane, pre-1981 construction, setback required, akiya-bank conditions).</li>
+    <li><strong>RISK</strong> — a condition that limits what you can do with the property or its resale (e.g. rebuilding prohibited, urbanization control area, disclosure matters present, inside a special landslide zone).</li>
+    <li><strong>UNKNOWN</strong> — the listing did not say. Unknown items are <em>not</em> counted as OK, and each one comes with the question to send the agent.</li>
+  </ul>
+  <p>The overall letter (A–E) counts RISK and CAUTION items with fixed weights. It is a triage grade, not a valuation. Two houses with the same letter can be very different in practice; the point of the grade is to tell you which items to ask about first.</p>
+
+  <h2>What the report cannot tell you</h2>
+  <ul>
+    <li>The physical condition of the building — termites, roof, structure, wiring. Nobody can inspect a roof from a URL. Budget for an on-site inspection.</li>
+    <li>Micro-topography. A lot 2 m above its neighbour behaves differently in a flood; the datasets are area designations.</li>
+    <li>Whether the municipality will actually issue a permit for your plan. We report the zoning; the building department decides.</li>
+    <li>Anything the listing hides. If a listing omits 告知事項, the report cannot know. That is why UNKNOWN items exist.</li>
+    <li>Legal, tax, or brokerage advice. The report is desk research; contracts, registration and tax need licensed professionals.</li>
+  </ul>
+
+  <h2>Refund rule</h2>
+  <p>If a report states a fact as OK / CAUTION / RISK and the official dataset or the listing says otherwise, we refund the full price. If we cannot produce a report from the data available, we refund the full price. UNKNOWN items are explicitly not claims and are not covered. Details are in the <a href="../legal/">terms</a>.</p>
+
+  <h2>How the guides are written</h2>
+  <p>Every guide on the <a href="../blog/">Blog &amp; Guides</a> page cites the law or dataset it relies on (Building Standards Act articles, MLIT and GSI portals, municipal programme pages). We do not publish testimonials, invented case studies, or "expert" bylines. When a guide gives a cost range, it is a range from public sources, not a measurement we took.</p>
+
+  <h2>Contact and corrections</h2>
+  <p>Found an error in a guide or a report? Reply to your delivery email, or use the form on the <a href="../">home page</a>. Corrections are noted on the page with the date.</p>
+
+  <div class="ctabox">
+    <p><strong>Want to see the method on a real lot first?</strong> The sample report uses live MLIT data for an address in Tateyama, Chiba.</p>
+    <a class="btn" href="../sample/">View the sample report</a> &nbsp; <a class="btn" href="../checklist/">Free 12-point checklist</a>
+  </div>
+</div></section>
+
+<footer class="site"><div class="wrap">
+  <a href="../legal/">Terms, privacy &amp; refunds</a><a href="../legal/#tokushoho">特定商取引法に基づく表記</a><a href="../blog/">Blog &amp; Guides</a><a href="./">About</a><a href="../checklist/">Free checklist</a>
+  <p class="disc">Akiya Check reports are automated summaries of publicly available Japanese government data and listing text, provided for information only. They are not legal, tax, or real-estate brokerage advice.</p>
+</div></footer>
+</body>
+</html>
