@@ -1,0 +1,444 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- ga4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CX0ZYF5HN7"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-CX0ZYF5HN7', { anonymize_ip: true });
+</script>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Japan Hazard Map in English: Free Flood, Landslide, Tsunami &amp; Liquefaction Lookup – Akiya Check</title>
+<meta name="description" content="Free tool: enter a Japanese address or coordinates and open Japan's official hazard map, GSI Maps and the MLIT Real Estate Information Library at that exact spot — with English guides to every layer, color and Japanese legend.">
+<link rel="canonical" href="https://solederlego8-a11y.github.io/akiya-check/tools/japan-hazard-map-english/">
+<meta property="og:title" content="Japan Hazard Map in English: Free Flood, Landslide, Tsunami &amp; Liquefaction Lookup">
+<meta property="og:description" content="Enter a Japanese address or coordinates and open Japan's official hazard maps at that exact spot — with English explanations of every layer, color and legend.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://solederlego8-a11y.github.io/akiya-check/tools/japan-hazard-map-english/">
+<link rel="stylesheet" href="../../assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Akiya Check",
+  "url": "https://solederlego8-a11y.github.io/akiya-check/",
+  "parentOrganization": {
+    "@type": "Organization",
+    "@id": "https://solederlego8-a11y.github.io/#org",
+    "name": "フォローズ",
+    "url": "https://solederlego8-a11y.github.io/"
+  },
+  "sameAs": [
+    "https://solederlego8-a11y.github.io/"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Japan Hazard Map in English","url":"https://solederlego8-a11y.github.io/akiya-check/tools/japan-hazard-map-english/","description":"Free browser tool that turns a Japanese address or coordinates into direct links to Japan's official hazard map (Kasaneru Hazard Map), GSI Maps and MLIT's Real Estate Information Library, with English explanations of each layer and legend.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any (web browser)","browserRequirements":"Requires JavaScript","inLanguage":"en","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"publisher":{"@type":"Organization","name":"Akiya Check","url":"https://solederlego8-a11y.github.io/akiya-check/"},"datePublished":"2026-10-04","dateModified":"2026-10-04"}
+</script>
+<!-- ga4-cv -->
+<script>
+if(typeof gtag==='function'){document.addEventListener('click',function(e){var a=e.target&&e.target.closest&&e.target.closest('a[href]');if(!a||a.hasAttribute('data-cv-tracked'))return;var h=a.href||'';var has=function(s){return h.indexOf(s)>-1;};var asp=has('a8.net')?'a8':(has('rakuten.co.jp')||has('r10.to'))?'rakuten':(has('amazon.co.jp')||has('amzn.'))?'amazon':'';if(asp){gtag('event','affiliate_click',{asp:asp,link_url:h,link_text:(a.innerText||'').trim().slice(0,80),page_path:location.pathname});}else if(has('buy.stripe.com')){gtag('event','begin_checkout',{link_url:h,page_path:location.pathname});}},true);document.addEventListener('submit',function(e){var f=e.target;gtag('event','generate_lead',{form_id:f.id||f.getAttribute('data-subject')||f.action||'',page_path:location.pathname});},true);}
+</script>
+<style>
+.tool{border:1px solid var(--line);border-radius:var(--radius);padding:20px;background:var(--soft);margin:24px 0}
+.tool label{display:block;font-weight:700;font-size:15px;margin-bottom:6px}
+.tool .row{display:flex;gap:10px;flex-wrap:wrap}
+.tool input[type=text]{flex:1 1 260px;min-width:0;padding:12px;border:1px solid #cfd5dd;border-radius:8px;font-size:16px;font-family:inherit}
+.tool button{cursor:pointer;font-size:16px;font-family:inherit}
+.tool .hint{font-size:14px;color:var(--muted);margin:8px 0 0}
+.status{margin-top:14px;font-size:15px}
+.status.err{background:#fdf1ef;border:1px solid #f1c7c0;border-radius:8px;padding:12px 14px}
+.status.ok{background:#e9f7ef;border:1px solid #bfe6cf;border-radius:8px;padding:12px 14px}
+.cands{display:flex;flex-direction:column;gap:6px;margin-top:10px}
+.cands button{text-align:left;background:#fff;border:1px solid var(--line);border-radius:8px;padding:8px 10px;font-size:15px}
+.cands button[aria-pressed=true]{border-color:var(--accent);box-shadow:0 0 0 2px #bfe6cf}
+.results{display:none;margin-top:18px}
+.results.show{display:block}
+.svc{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:16px;margin:12px 0}
+.svc h3{margin:0 0 4px;font-size:18px}
+.svc p{margin:0 0 10px;font-size:15px;color:var(--muted)}
+.svc .links{display:flex;flex-wrap:wrap;gap:8px}
+.svc .links a{display:inline-block;padding:9px 12px;border-radius:8px;background:var(--brand);color:#fff;text-decoration:none;font-weight:600;font-size:14px}
+.svc .links a.alt{background:#fff;color:var(--brand);border:1px solid var(--brand)}
+.coords{font-family:Consolas,Menlo,monospace;font-size:14px;overflow-wrap:anywhere}
+.legend{width:100%;border-collapse:collapse;font-size:15px;margin:10px 0 18px}
+.legend th,.legend td{text-align:left;padding:8px;border-bottom:1px solid var(--line);vertical-align:top}
+.legend th{background:var(--soft);font-weight:600}
+.sw{display:inline-block;width:18px;height:18px;border-radius:3px;vertical-align:middle;border:1px solid rgba(0,0,0,.15)}
+.sw.dash{outline:2px dashed #1a2a8a;outline-offset:-4px}
+.tblwrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.notice{border-left:4px solid var(--warn);background:#fff8ec;padding:10px 14px;font-size:15px;margin:16px 0}
+@media (max-width:600px){.legend{font-size:14px}.legend th,.legend td{padding:6px}.article h1{font-size:28px}.tool{padding:14px}}
+</style>
+<!-- faq-schema -->
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is there an official English version of Japan's hazard map?", "acceptedAnswer": {"@type": "Answer", "text": "The Kasaneru Hazard Map and its legends are in Japanese, and the municipal hazard maps are usually Japanese PDFs. Some cities publish English or multilingual hazard maps, so search the municipality's website as well. This page gives you English explanations of the national map layers and links straight to the right spot, but the maps themselves stay in Japanese."}}, {"@type": "Question", "name": "Why did my English address not work?", "acceptedAnswer": {"@type": "Answer", "text": "The address search this tool uses is GSI's Japanese address search, and in our tests it returned no results for romanized addresses. Copy the Japanese address from the listing (the 所在地 line), or paste latitude and longitude from Google Maps. Coordinates are also more precise than a partial address, which may only match the town centre."}}, {"@type": "Question", "name": "Does a blank area on the hazard map mean the house is safe?", "acceptedAnswer": {"@type": "Answer", "text": "No. A blank area can mean the modeled risk is low, or that no data has been prepared for that hazard there yet; the portal itself says some places are not yet mapped. Hazard maps are also based on assumed scenarios, and real events can exceed them. Check each layer separately and confirm with the municipality's own hazard map."}}, {"@type": "Question", "name": "Is this tool free, and does Akiya Check store what I type?", "acceptedAnswer": {"@type": "Answer", "text": "The tool is free and runs in your browser. The address you type is sent directly from your browser to GSI's address search and reverse-geocoding services to find the coordinates and municipality, and the map links open the government sites in a new tab. This page does not save the address. Our analytics record page visits and button clicks, not the address text."}}, {"@type": "Question", "name": "Can I rely on these maps instead of the agent's explanation before signing?", "acceptedAnswer": {"@type": "Answer", "text": "No. Since 28 August 2020 the agent must show you the property's location on the municipal flood hazard maps during the important-matters explanation (重要事項説明), and the portal's terms say its overlay map cannot be used for that explanation. Use these maps to screen properties early, then compare with what the agent shows you and ask about any difference."}}]}
+</script>
+</head>
+<body>
+<header class="site"><div class="wrap">
+  <a class="logo" href="../../" title="Akiya (空き家) = empty house in Japanese">Akiya<span>Check</span></a>
+  <nav class="main"><a href="../../#how">How it works</a><a href="../../#pricing">Pricing</a><a href="../../blog/">Blog &amp; Guides</a><a href="./">Hazard map tool</a><a href="../../about/">About</a><a class="cta" href="../../checklist/">Free checklist</a></nav>
+</div></header>
+
+<section><div class="wrap article">
+  <p class="meta">Free tool · Updated 2026-10-04</p>
+  <h1>Japan Hazard Map in English: open the official flood, landslide, tsunami and liquefaction maps for any address</h1>
+
+  <p><strong>What this does:</strong> type a Japanese address (or paste coordinates) and this page gives you one-click links that open Japan's official hazard map, the Geospatial Information Authority's map, and MLIT's Real Estate Information Library <em>already centered on that spot</em>, with the right hazard layer switched on. Those three government sites are excellent, but their menus and legends are in Japanese. Below the tool you will find an English guide to what each layer means, how to read its colors, and what the Japanese legend labels say.</p>
+
+  <p class="notice"><strong>Independence note:</strong> the three map services below are run by the Japanese government — the Ministry of Land, Infrastructure, Transport and Tourism (MLIT) and the Geospatial Information Authority of Japan (GSI). Akiya Check is a separate, private information service and is not affiliated with, endorsed by, or connected to MLIT or GSI. This page only builds links to their public sites; the maps and data belong to them.</p>
+
+  <div class="tool" id="tool">
+    <form id="hz-form" autocomplete="off">
+      <label for="hz-q">Address in Japanese, or latitude, longitude</label>
+      <div class="row">
+        <input type="text" id="hz-q" name="q" placeholder="e.g. 長野県松本市丸の内3-7  or  36.2380, 137.9715">
+        <button class="btn primary" type="submit" id="hz-go">Find on the maps</button>
+      </div>
+      <p class="hint">Japanese addresses work best — copy the 所在地 (location) line from the listing. English addresses are usually not recognised by the government address search; if that happens, paste coordinates or a Google Maps link instead (steps below). Nothing you type is stored by this page.</p>
+    </form>
+    <div class="status" id="hz-status" role="status" aria-live="polite" hidden></div>
+    <div class="cands" id="hz-cands" hidden></div>
+    <div class="results" id="hz-results">
+      <p class="coords">Location used: <span id="hz-ll"></span> <span id="hz-area"></span></p>
+
+      <div class="svc">
+        <h3>1. Hazard Map Portal — 重ねるハザードマップ (Kasaneru Hazard Map)</h3>
+        <p>Run by MLIT and GSI. Each button opens the map at this point with one hazard layer on.</p>
+        <div class="links">
+          <a id="l-flood" target="_blank" rel="noopener">Flood (洪水・内水)</a>
+          <a id="l-dosha" target="_blank" rel="noopener">Landslide (土砂災害)</a>
+          <a id="l-tsunami" target="_blank" rel="noopener">Tsunami (津波)</a>
+          <a id="l-ekijo" target="_blank" rel="noopener">Liquefaction (液状化)</a>
+          <a id="l-plain" class="alt" target="_blank" rel="noopener">Map only (no layer)</a>
+        </div>
+        <p style="margin-top:10px"><a href="#guide-hazard">What to look at on this map ↓</a></p>
+      </div>
+
+      <div class="svc">
+        <h3>2. GSI Maps — 地理院地図 (Chiriin Chizu)</h3>
+        <p>Run by GSI. The base topographic map plus two views of how the land was formed and used.</p>
+        <div class="links">
+          <a id="l-gsi" target="_blank" rel="noopener">Standard map</a>
+          <a id="l-gsi-lc" target="_blank" rel="noopener">Landform for flood control (治水地形分類図)</a>
+          <a id="l-gsi-air" target="_blank" rel="noopener">Aerial photos 1961–1969</a>
+        </div>
+        <p style="margin-top:10px"><a href="#guide-gsi">What to look at on this map ↓</a></p>
+      </div>
+
+      <div class="svc">
+        <h3>3. Real Estate Information Library — 不動産情報ライブラリ (Reinfolib)</h3>
+        <p>Run by MLIT. Opens the area-search box with the prefecture and municipality pre-selected when we can detect them; choose the district (地区) and press 地図表示 (show map).</p>
+        <div class="links">
+          <a id="l-reinfo" target="_blank" rel="noopener">Open Reinfolib for this municipality</a>
+        </div>
+        <p style="margin-top:10px"><a href="#guide-reinfolib">Menu translations ↓</a></p>
+      </div>
+      <p class="hint">Links open the official sites in a new tab. Their layouts can change without notice; if a link stops landing in the right place, the site itself still works from its home page.</p>
+    </div>
+  </div>
+
+  <h2 id="coords">If the address search fails: copy coordinates from Google Maps</h2>
+  <p>The address lookup uses the address search that GSI built for its own map site. It runs in your browser, and GSI has said that these search functions are intended mainly for its own map and may change or stop without notice. It also only understands Japanese addresses. If you see an error, or the result lands in the wrong town, use coordinates instead — they are exact and work every time:</p>
+  <ol>
+    <li><strong>On a computer:</strong> open Google Maps, find the house (search the address from the listing, or zoom in on the photo landmarks), right-click the exact building, and click the two numbers at the top of the menu (for example <span class="coords">36.23799, 137.97145</span>). They are copied to your clipboard.</li>
+    <li><strong>On a phone:</strong> in the Google Maps app, press and hold on the building to drop a pin. The coordinates appear in the search box or the pin card; tap to copy them.</li>
+    <li>Paste them into the box above. A Google Maps link that contains <span class="coords">@36.23799,137.97145</span> also works — we read the numbers out of it.</li>
+  </ol>
+  <p>Coordinates should be latitude first (about 24 to 46 in Japan) and longitude second (about 123 to 154). If you paste them the other way round, the tool swaps them for you.</p>
+
+  <h2 id="guide-hazard">Map 1: Kasaneru Hazard Map (重ねるハザードマップ) — what each layer means</h2>
+  <p>The <a href="https://disaportal.gsi.go.jp/" target="_blank" rel="noopener">Hazard Map Portal Site</a> is run by MLIT's Water and Disaster Management Bureau together with GSI. Its "Kasaneru" (overlay) map gathers hazard data made by national and prefectural agencies into one national map. Two points from its <a href="https://disaportal.gsi.go.jp/hazardmapportal/hazardmap/copyright/copyright.html" target="_blank" rel="noopener">terms of use</a> matter for buyers. First, the portal says its mesh size, drawing method and legends may differ from the hazard maps that the agencies themselves publish, and some places have no data yet. For the latest and most detailed version it points you to the municipality's own hazard map, which you can find through the portal's わがまちハザードマップ (Wagamachi, "my town") link list. Second, it notes that real-estate agents cannot use the overlay map for the legally required pre-contract explanation. So use it to screen, and ask for the municipal map at the important-matters explanation.</p>
+  <p>Tip: click any point on the map and the portal shows the hazards at that point in a Japanese text pop-up. A browser translator handles those pop-ups well, but check the numbers against the legend below.</p>
+
+  <h3>Flood (洪水・内水): the 想定最大規模 depth bands</h3>
+  <p>The flood button turns on the <strong>洪水浸水想定区域（想定最大規模）</strong> layer: the area expected to flood if a river overflows in the largest rainfall the river authority assumes (想定最大規模, "assumed maximum scale"). It is a worst-case planning scenario, not an every-year event. The same button also shows two smaller flood layers where they exist: 内水 (inland flooding, when drains and small channels back up in heavy rain) and ため池 (flooding if an irrigation pond breaks). The depth colors follow the national legend; the plain-English meaning in the third column comes from the portal's own picture key.</p>
+  <div class="tblwrap"><table class="legend">
+    <tr><th>Color</th><th>Japanese legend</th><th>English</th></tr>
+    <tr><td><span class="sw" style="background:#f7f5a9"></span></td><td>0.0〜0.5m　大人の膝までつかる程度</td><td>Up to 0.5 m — roughly knee-deep for an adult</td></tr>
+    <tr><td><span class="sw" style="background:#ffd8c0"></span></td><td>0.5〜3.0m　1階天井まで浸水する程度</td><td>0.5–3 m — water can reach the ground-floor ceiling</td></tr>
+    <tr><td><span class="sw" style="background:#ffb7b7"></span></td><td>3.0〜5.0m　2階部分まで浸水する程度</td><td>3–5 m — water can reach the second floor</td></tr>
+    <tr><td><span class="sw" style="background:#ff9191"></span></td><td>5.0〜10m　2階の屋根以上が浸水する</td><td>5–10 m — water can rise above a two-storey roof</td></tr>
+    <tr><td><span class="sw" style="background:#f285c9"></span></td><td>10〜20m</td><td>10–20 m</td></tr>
+    <tr><td><span class="sw" style="background:#dc7adc"></span></td><td>20m〜</td><td>20 m or more</td></tr>
+  </table></div>
+  <p>The color swatches on this page are approximations of the portal's colors and are only a reading aid; trust the colors and legend on the official map. What to note: the band at the house itself (not the street), and whether the lot is on the edge of a colored area. Under the portal's "すべての情報から選択" (choose from all information) menu you can also add 浸水継続時間 (how long the water is expected to stay) and 家屋倒壊等氾濫想定区域 (zones next to rivers where the flow or bank erosion could knock houses down) — the second one is a serious flag for a wooden house.</p>
+
+  <h3>Landslide (土砂災害): yellow zones and red zones</h3>
+  <p>The landslide button turns on the 土砂災害警戒区域等 layers, which prefectures designate under the Act on Sediment Disaster Countermeasures. There are three phenomena, each in its own colors, and two levels:</p>
+  <div class="tblwrap"><table class="legend">
+    <tr><th>Japanese</th><th>English</th><th>Colors on the map</th></tr>
+    <tr><td>急傾斜地の崩壊</td><td>Steep-slope failure (a slope collapsing onto houses)</td><td><span class="sw" style="background:#ffe100"></span> 警戒区域 · <span class="sw" style="background:#ff2d00"></span> 特別警戒区域</td></tr>
+    <tr><td>土石流</td><td>Debris flow (mud and rock rushing down a stream valley)</td><td><span class="sw" style="background:#e5c835"></span> 警戒区域 · <span class="sw" style="background:#a8001f"></span> 特別警戒区域</td></tr>
+    <tr><td>地すべり</td><td>Landslide (a large block of ground slowly sliding)</td><td><span class="sw" style="background:#ffa000"></span> 警戒区域 · <span class="sw" style="background:#a8001f"></span> 特別警戒区域</td></tr>
+  </table></div>
+  <ul>
+    <li><strong>土砂災害警戒区域 — "Sediment Disaster Warning Area" (the "yellow zone")</strong>: residents' lives could be at risk in a sediment disaster. It mainly drives warning and evacuation planning.</li>
+    <li><strong>土砂災害特別警戒区域 — "Special Warning Area" (the "red zone")</strong>: buildings could be damaged and people seriously hurt. Certain development needs permission and new living spaces face structural rules, which can make rebuilding expensive.</li>
+    <li><strong>指定済 / 指定予定</strong>: "designated" areas are filled; "planned" areas (surveyed but not yet designated) are drawn with a dashed blue border. Treat a planned zone as a zone.</li>
+  </ul>
+
+  <h3>Tsunami (津波): inundation depth</h3>
+  <p>The tsunami button turns on 津波浸水想定, the maximum-scale tsunami inundation that each coastal prefecture sets under the Act on Building Communities Resilient to Tsunamis. The legend uses the same color family as the flood map, but some prefectures add finer bands near the bottom: 〜0.3m (up to 0.3 m), 〜0.5m, 0.5m〜1m, 0.5m〜3m, 3m〜5m, 5m〜10m, 10m〜20m and 20m〜. Even 0.3–1 m of moving tsunami water is dangerous to people on foot, so for a coastal house also check how far it is to higher ground — the evacuation-site symbols (指定緊急避難場所) can be added from the portal's menu.</p>
+
+  <h3>Liquefaction (液状化): the 5-level tendency map</h3>
+  <p>The liquefaction button shows 地形区分に基づく液状化の発生傾向図, a national map that ranks each roughly 250 m mesh by how easily its type of ground has liquefied in past earthquakes. It is a screening map, not a prediction for one lot. The legend runs from 強 (strong tendency) at the top to 弱 (weak) at the bottom:</p>
+  <div class="tblwrap"><table class="legend">
+    <tr><th>Color</th><th>Japanese legend</th><th>English</th></tr>
+    <tr><td><span class="sw" style="background:#cc00ff"></span></td><td>埋立地や旧河道など</td><td>Strongest: reclaimed land, former river channels, etc.</td></tr>
+    <tr><td><span class="sw" style="background:#ff2a00"></span></td><td>干拓地や自然堤防など</td><td>Drained lakebed/sea land (polders), natural levees, etc.</td></tr>
+    <tr><td><span class="sw" style="background:#ffa500"></span></td><td>緩勾配の谷底低地、緩勾配の扇状地など</td><td>Gently sloping valley floors and alluvial fans</td></tr>
+    <tr><td><span class="sw" style="background:#fff000"></span></td><td>急勾配の谷底低地、急勾配の扇状地など</td><td>Steeper valley floors and alluvial fans</td></tr>
+    <tr><td><span class="sw" style="background:#c8c8cc"></span></td><td>山地や丘陵など</td><td>Weakest: mountains and hills</td></tr>
+  </table></div>
+  <p>Liquefaction is not part of the flood-map explanation an agent must give before a contract, so this layer is one you have to check yourself. Our longer guide explains what to do with the result: <a href="../../blog/liquefaction-risk-check-japan-house-before-buying.html">how to check liquefaction risk for a Japanese house</a>.</p>
+
+  <h2 id="guide-gsi">Map 2: GSI Maps (地理院地図) — reading the ground itself</h2>
+  <p><a href="https://maps.gsi.go.jp/" target="_blank" rel="noopener">GSI Maps</a> is the national topographic map. It does not draw hazard zones, but it shows the shape and history of the land, which explains <em>why</em> a lot is on the hazard map.</p>
+  <ul>
+    <li><strong>Standard map + elevation:</strong> the bar at the bottom of the screen shows 標高 (elevation in metres) at the crosshair. Compare the house with the nearest river and the surrounding streets: a lot a metre or two lower than its neighbours collects water.</li>
+    <li><strong>治水地形分類図 (landform classification for flood control):</strong> GSI built this map for river basins managed by the national and prefectural governments, mainly the plains of 109 major river systems, so it is blank in many rural and mountain areas. Where it exists, look for 旧河道 (former river channel), 後背湿地 (back marsh — low wet ground behind a levee), 自然堤防 (natural levee — slightly higher, usually safer) and 扇状地 (alluvial fan). A house on a former channel or back marsh is more exposed to flooding and liquefaction. See <a href="https://www.gsi.go.jp/bousaichiri/fc_index.html" target="_blank" rel="noopener">GSI's explanation (Japanese)</a>.</li>
+    <li><strong>Aerial photos 1961–1969:</strong> shows what was there before the house. Rice paddies, a pond or a river bend under today's housing lot are a reason to look harder at ground conditions. Coverage varies; if the layer is blank, try the other periods from the 写真 (photos) menu.</li>
+  </ul>
+
+  <h2 id="guide-reinfolib">Map 3: Real Estate Information Library (不動産情報ライブラリ) — the menu in English</h2>
+  <p>The <a href="https://www.reinfolib.mlit.go.jp/" target="_blank" rel="noopener">Real Estate Information Library</a> is MLIT's property-information site. Its map combines prices, hazards, zoning and population on one screen. The tool above opens its area-search box with your prefecture and municipality pre-filled when the coordinates can be matched to a municipality code; choose the 地区 (district) and press 地図表示 (show map). The top menu translates as follows:</p>
+  <div class="tblwrap"><table class="legend">
+    <tr><th>Menu</th><th>Useful items inside</th></tr>
+    <tr><td>価格情報 — Prices</td><td>不動産取引価格情報 (transaction prices reported by buyers) · 成約価格情報 (closed-deal prices from the agents' network) · 国土交通省地価公示 / 都道府県地価調査 (official land price benchmarks)</td></tr>
+    <tr><td>地形情報 — Terrain</td><td>陰影起伏図 (shaded relief) · 土地条件図 (land condition map) · 大規模盛土造成地マップ (large fill-land developments)</td></tr>
+    <tr><td>防災情報 — Disaster prevention</td><td>洪水浸水想定区域 (flood) · 土砂災害警戒区域 (landslide zones) · 津波浸水想定 (tsunami) · 高潮浸水想定区域 (storm surge) · 災害危険区域 (disaster hazard districts with building limits) · 急傾斜地崩壊危険区域 · 地すべり防止地区 · 液状化の発生傾向図 (liquefaction) · 災害履歴 (past disasters) · 指定緊急避難場所 (evacuation sites)</td></tr>
+    <tr><td>周辺施設情報 — Nearby facilities</td><td>Nurseries, school districts (小学校区 / 中学校区), medical and welfare facilities, libraries, town offices</td></tr>
+    <tr><td>都市計画情報 — City planning</td><td>区域区分 (urbanization area vs. control area) · 用途地域 (land-use zone) · 防火・準防火地域 (fire-prevention districts) · 都市計画道路 (planned roads) · 地区計画 · 立地適正化計画</td></tr>
+    <tr><td>人口情報等 — Population</td><td>Census population in a 250 m mesh · 将来推計人口 (projected future population) · station passenger numbers · densely inhabited districts</td></tr>
+  </table></div>
+  <p>Two layers here are not on the hazard portal and matter a lot for cheap rural houses: <strong>災害危険区域</strong> (a disaster hazard district where a municipality can restrict building homes) and <strong>区域区分</strong>, which tells you whether the lot is in an <a href="../../blog/urbanization-control-area-japan-house.html">urbanization control area (市街化調整区域)</a> where rebuilding can be restricted. For prices, see our guide to <a href="../../blog/check-sold-prices-japan-property-reinfolib.html">checking sold prices on Reinfolib</a>.</p>
+
+  <h2>What the maps can't tell you</h2>
+  <p>Hazard maps answer one question — what nature might do to this spot. They say nothing about whether you are allowed to rebuild the house if it burns down (<a href="../../blog/saikenchiku-fuka-rebuilding-prohibited.html">再建築不可</a>), whether the lot touches a legal road, whether there is a septic tank, a leasehold or a disclosure matter in the listing, or whether the asking price is in line with recent sales nearby. Those facts sit in the listing text, the zoning layers and the transaction records, and you have to cross-check them one by one. Our <a href="../../blog/japan-hazard-map-akiya-flood-landslide-tsunami.html">hazard map guide for akiya buyers</a> walks through the flood, landslide and tsunami checks in more depth, including what the agent must disclose.</p>
+
+  <div class="ctabox">
+    <p><strong>The map shows part of the picture. The report puts it all on one page.</strong> An Akiya Check report reads the listing you are looking at and combines the hazard layers above with rebuild restrictions, land-use zoning, utilities, transaction prices and population trend for that exact lot — in English, with the questions to send the agent in Japanese. Unknowns are marked unknown, never guessed.</p>
+    <a class="btn" href="../../#pricing">Single report $49 · Compare 3 for $99</a> &nbsp; <a class="btn" href="../../checklist/">Free 12-point checklist</a>
+  </div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap article">
+  <h2>FAQ</h2>
+  <h3>Is there an official English version of Japan's hazard map?</h3>
+  <p>The Kasaneru Hazard Map and its legends are in Japanese, and the municipal hazard maps are usually Japanese PDFs. Some cities publish English or multilingual hazard maps, so search the municipality's website as well. This page gives you English explanations of the national map layers and links straight to the right spot, but the maps themselves stay in Japanese.</p>
+
+  <h3>Why did my English address not work?</h3>
+  <p>The address search this tool uses is GSI's Japanese address search, and in our tests it returned no results for romanized addresses. Copy the Japanese address from the listing (the 所在地 line), or paste latitude and longitude from Google Maps. Coordinates are also more precise than a partial address, which may only match the town centre.</p>
+
+  <h3>Does a blank area on the hazard map mean the house is safe?</h3>
+  <p>No. A blank area can mean the modeled risk is low, or that no data has been prepared for that hazard there yet; the portal itself says some places are not yet mapped. Hazard maps are also based on assumed scenarios, and real events can exceed them. Check each layer separately and confirm with the municipality's own hazard map.</p>
+
+  <h3>Is this tool free, and does Akiya Check store what I type?</h3>
+  <p>The tool is free and runs in your browser. The address you type is sent directly from your browser to GSI's address search and reverse-geocoding services to find the coordinates and municipality, and the map links open the government sites in a new tab. This page does not save the address. Our analytics record page visits and button clicks, not the address text.</p>
+
+  <h3>Can I rely on these maps instead of the agent's explanation before signing?</h3>
+  <p>No. Since 28 August 2020 the agent must show you the property's location on the municipal flood hazard maps during the important-matters explanation (重要事項説明), and the portal's terms say its overlay map cannot be used for that explanation. Use these maps to screen properties early, then compare with what the agent shows you and ask about any difference.</p>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap article">
+  <h2>Sources</h2>
+  <ul>
+    <li><a href="https://disaportal.gsi.go.jp/" target="_blank" rel="noopener">Hazard Map Portal Site (ハザードマップポータルサイト)</a> — MLIT / GSI; legends from the Kasaneru Hazard Map, checked 2026-10-04.</li>
+    <li><a href="https://disaportal.gsi.go.jp/hazardmapportal/hazardmap/copyright/copyright.html" target="_blank" rel="noopener">Hazard Map Portal terms of use (利用規約)</a>, version dated 9 December 2024 (令和6年12月9日).</li>
+    <li><a href="https://maps.gsi.go.jp/" target="_blank" rel="noopener">GSI Maps (地理院地図)</a> and <a href="https://www.gsi.go.jp/bousaichiri/fc_index.html" target="_blank" rel="noopener">GSI: about the landform classification map for flood control (治水地形分類図)</a>.</li>
+    <li><a href="https://www.reinfolib.mlit.go.jp/" target="_blank" rel="noopener">Real Estate Information Library (不動産情報ライブラリ)</a> — MLIT; menu labels checked 2026-10-04.</li>
+    <li><a href="https://www.mlit.go.jp/report/press/totikensangyo16_hh_000205.html" target="_blank" rel="noopener">MLIT press release on adding flood hazard maps to the important-matters explanation (2020)</a>.</li>
+    <li><a href="https://github.com/gsi-cyberjapan/gsimaps/issues/29" target="_blank" rel="noopener">GSI's note on using the GSI Maps search functions from other sites</a> (Japanese).</li>
+  </ul>
+  <p class="disc">This page is general information. Map layers, legends and site layouts belong to the Japanese government services named above and may change; always read the current legend on the official map. Akiya Check is not affiliated with MLIT or GSI. Nothing here is legal, tax, or real-estate brokerage advice — confirm every point for a specific property with the agent, the municipality, and licensed professionals.</p>
+</div></section>
+
+<footer class="site"><div class="wrap">
+  <a href="../../legal/">Terms, privacy &amp; refunds</a><a href="../../legal/#tokushoho">特定商取引法に基づく表記</a><a href="../../blog/">Blog &amp; Guides</a><a href="../../about/">About</a><a href="../../checklist/">Free checklist</a>
+  <p class="disc">Information only — not legal, tax, or real-estate brokerage advice.</p>
+</div></footer>
+
+<script>
+(function () {
+  'use strict';
+  var GSI_SEARCH = 'https://msearch.gsi.go.jp/address-search/AddressSearch?q=';
+  var GSI_REVERSE = 'https://mreversegeocoder.gsi.go.jp/reverse-geocoder/LonLatToAddress';
+  // Layer strings copied from the URLs the Hazard Map Portal itself produces (checked 2026-10-04).
+  var HZ = {
+    flood:   { ls: 'seamless%7Cflood_l2_kaokutoukai_kagan%2C0.8%7Cflood_l2_kaokutoukai_hanran%2C0.8%7Cflood_l2_keizoku%2C0.8%7Cflood_list%2C0.8%7Cflood_l1%2C0.8%7Ctameike_raster%2C0.8%7Cnaisui_raster%2C0.8%7Cflood_list_l2%2C0.75%7Cdisaster1', disp: '0000001110' },
+    dosha:   { ls: 'seamless%7Cdosha_kiken_nadare%2C0.8%7Cdosha_keikai_jisuberi%2C0.8%7Cdosha_keikai_dosekiryu%2C0.8%7Cdosha_keikai_kyukeisha%2C0.8%7Cdisaster2', disp: '001110' },
+    tsunami: { ls: 'seamless%7Cekijouka_zenkoku%2C0.8%7Ctsunamishinsui_raster%2C0.8%7Cdisaster5', disp: '0010' },
+    ekijo:   { ls: 'seamless%7Cekijouka_zenkoku%2C0.8', disp: '01' }
+  };
+  var VS_HZ = 'c1j0l0u0t0h0z0';
+  var VS_GSI = 'c1g1j0h0k0l0u0t0z0r0s0m0f1';
+
+  var $ = function (id) { return document.getElementById(id); };
+  var form = $('hz-form'), input = $('hz-q'), statusEl = $('hz-status'), cands = $('hz-cands'), results = $('hz-results');
+
+  function track(name, params) { try { if (typeof gtag === 'function') gtag('event', name, params || {}); } catch (e) {} }
+
+  function setStatus(kind, html) {
+    statusEl.hidden = false;
+    statusEl.className = 'status' + (kind ? ' ' + kind : '');
+    statusEl.innerHTML = html;
+  }
+
+  function fmt(n) { return (Math.round(n * 1e6) / 1e6).toFixed(6); }
+
+  function inJapan(lat, lng) { return lat >= 20 && lat <= 46.5 && lng >= 122 && lng <= 154.5; }
+
+  // Returns {lat,lng,swapped} or null. Accepts "lat, lng", "lat lng", Google Maps URLs (@lat,lng / !3dlat!4dlng / q=lat,lng).
+  function parseCoords(s) {
+    var m = s.match(/!3d(-?\d+(?:\.\d+)?)!4d(-?\d+(?:\.\d+)?)/) ||
+            s.match(/@(-?\d+(?:\.\d+)?),\s*(-?\d+(?:\.\d+)?)/) ||
+            s.match(/[?&](?:q|query|ll|center)=(-?\d+(?:\.\d+)?)(?:,|%2C)\s*(-?\d+(?:\.\d+)?)/i) ||
+            s.match(/^\s*\(?\s*(-?\d{1,3}(?:\.\d+)?)\s*[,\s、，]\s*(-?\d{1,3}(?:\.\d+)?)\s*\)?\s*$/);
+    if (!m) return null;
+    var a = parseFloat(m[1]), b = parseFloat(m[2]);
+    if (!isFinite(a) || !isFinite(b)) return null;
+    if (inJapan(a, b)) return { lat: a, lng: b, swapped: false };
+    if (inJapan(b, a)) return { lat: b, lng: a, swapped: true };
+    return { lat: a, lng: b, outside: true };
+  }
+
+  function hasJapanese(s) { return /[぀-ヿ㐀-鿿]/.test(s); }
+
+  function fetchJSON(url, ms) {
+    var ctrl = typeof AbortController === 'function' ? new AbortController() : null;
+    var timer = ctrl ? setTimeout(function () { ctrl.abort(); }, ms || 9000) : null;
+    return fetch(url, ctrl ? { signal: ctrl.signal } : {}).then(function (r) {
+      if (timer) clearTimeout(timer);
+      if (!r.ok) throw new Error('HTTP ' + r.status);
+      return r.json();
+    }, function (err) { if (timer) clearTimeout(timer); throw err; });
+  }
+
+  function hazardUrl(lat, lng, key) {
+    var u = 'https://disaportal.gsi.go.jp/hazardmap/maps/index.html?ll=' + fmt(lat) + ',' + fmt(lng) + '&z=16&base=pale';
+    if (key) u += '&ls=' + HZ[key].ls + '&disp=' + HZ[key].disp;
+    return u + '&vs=' + VS_HZ;
+  }
+
+  function gsiUrl(lat, lng, overlay) {
+    var ls = overlay ? 'std%7C' + overlay : 'std', disp = overlay ? '11' : '1';
+    return 'https://maps.gsi.go.jp/#16/' + fmt(lat) + '/' + fmt(lng) + '/&base=std&ls=' + ls + '&disp=' + disp + '&vs=' + VS_GSI;
+  }
+
+  function reinfoUrl(muniCd) {
+    if (muniCd && /^\d{5}$/.test(muniCd)) {
+      return 'https://www.reinfolib.mlit.go.jp/map/?initialState=areaOpen&areaOption=address&kCode=' + muniCd.slice(0, 2) + '&sCode=' + muniCd;
+    }
+    return 'https://www.reinfolib.mlit.go.jp/map/';
+  }
+
+  function showLinks(lat, lng, label) {
+    $('l-flood').href = hazardUrl(lat, lng, 'flood');
+    $('l-dosha').href = hazardUrl(lat, lng, 'dosha');
+    $('l-tsunami').href = hazardUrl(lat, lng, 'tsunami');
+    $('l-ekijo').href = hazardUrl(lat, lng, 'ekijo');
+    $('l-plain').href = hazardUrl(lat, lng, null);
+    $('l-gsi').href = gsiUrl(lat, lng, null);
+    $('l-gsi-lc').href = gsiUrl(lat, lng, 'lcmfc2');
+    $('l-gsi-air').href = gsiUrl(lat, lng, 'ort_old10');
+    $('l-reinfo').href = reinfoUrl(null);
+    $('hz-ll').textContent = fmt(lat) + ', ' + fmt(lng);
+    $('hz-area').textContent = label ? '(' + label + ')' : '';
+    results.classList.add('show');
+    // Look up the municipality code so Reinfolib opens with the prefecture/city pre-selected.
+    fetchJSON(GSI_REVERSE + '?lat=' + fmt(lat) + '&lon=' + fmt(lng), 8000).then(function (d) {
+      var cd = d && d.results && d.results.muniCd;
+      if (cd) {
+        cd = String(cd);
+        if (cd.length === 4) cd = '0' + cd;
+        $('l-reinfo').href = reinfoUrl(cd);
+        if (!label && d.results.lv01Nm) $('hz-area').textContent = '(near ' + d.results.lv01Nm + ')';
+      }
+    }).catch(function () { /* keep the generic Reinfolib link */ });
+  }
+
+  var FALLBACK = ' Paste coordinates instead: in Google Maps, right-click the house (or long-press on a phone) and copy the two numbers, e.g. <span class="coords">36.23799, 137.97145</span>. <a href="#coords">Step-by-step</a>.';
+
+  function choose(btns, i, item) {
+    btns.forEach(function (b, j) { b.setAttribute('aria-pressed', j === i ? 'true' : 'false'); });
+    var c = item.geometry.coordinates;
+    showLinks(c[1], c[0], item.properties.title);
+  }
+
+  function renderCandidates(list) {
+    cands.innerHTML = '';
+    var btns = [];
+    list.slice(0, 5).forEach(function (item, i) {
+      var b = document.createElement('button');
+      b.type = 'button';
+      b.textContent = item.properties.title;
+      b.addEventListener('click', function () { choose(btns, i, item); });
+      cands.appendChild(b);
+      btns.push(b);
+    });
+    cands.hidden = list.length < 2;
+    choose(btns, 0, list[0]);
+  }
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var q = (input.value || '').trim();
+    cands.hidden = true; cands.innerHTML = '';
+    results.classList.remove('show');
+    if (!q) { setStatus('err', 'Type a Japanese address or paste coordinates.'); return; }
+
+    var c = parseCoords(q);
+    if (c) {
+      if (c.outside) { setStatus('err', 'Those coordinates are outside Japan. Check that latitude comes first (about 24–46) and longitude second (about 123–154).'); return; }
+      setStatus('ok', 'Using the coordinates you entered' + (c.swapped ? ' (we swapped them to latitude, longitude)' : '') + '. Open a map below.');
+      track('hazard_tool_lookup', { method: 'coords' });
+      showLinks(c.lat, c.lng, '');
+      return;
+    }
+
+    var addr = q.replace(/〒?\s*\d{3}[-‐－ー]?\d{4}/, '').trim();
+    setStatus('', 'Searching the GSI address search…');
+    $('hz-go').disabled = true;
+    fetchJSON(GSI_SEARCH + encodeURIComponent(addr), 9000).then(function (list) {
+      $('hz-go').disabled = false;
+      if (!Array.isArray(list) || !list.length) {
+        track('hazard_tool_lookup', { method: 'address', result: 'none' });
+        setStatus('err', (hasJapanese(addr)
+          ? 'No match for that address. Try a shorter form (prefecture + city + district), check the kanji, or'
+          : 'The government address search only understands Japanese addresses, and found nothing for this text. Copy the Japanese 所在地 line from the listing, or') + FALLBACK);
+        return;
+      }
+      var title = String(list[0].properties.title || '');
+      // Partial match: the input had a lot/house number but the match did not, so the point is a town or city centre.
+      var coarse = /[0-9０-９]/.test(addr) && !/[0-9０-９]|丁目|番|号/.test(title);
+      track('hazard_tool_lookup', { method: 'address', result: coarse ? 'partial' : 'found' });
+      if (coarse) {
+        setStatus('err', 'Only a partial match: <strong></strong>. The point below is the centre of that area, <em>not</em> the house, so the hazard layers may not apply to the lot. Try a shorter or corrected address, or' + FALLBACK);
+      } else {
+        setStatus('ok', 'Matched: <strong></strong>. Check that this is the right place — if only the town or district matched, the point is at its centre, not at the house. ' + (list.length > 1 ? 'Other possible matches are listed below.' : ''));
+      }
+      statusEl.querySelector('strong').textContent = list[0].properties.title;
+      renderCandidates(list);
+    }).catch(function () {
+      $('hz-go').disabled = false;
+      track('hazard_tool_lookup', { method: 'address', result: 'error' });
+      setStatus('err', 'The address search could not be reached from your browser (it may be blocked, offline or changed).' + FALLBACK);
+    });
+  });
+
+  // Track outbound map clicks (no address text is sent).
+  results.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[id^="l-"]');
+    if (a) track('hazard_tool_open', { service: a.id.slice(2) });
+  });
+})();
+</script>
+</body>
+</html>
