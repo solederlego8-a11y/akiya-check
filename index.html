@@ -148,7 +148,7 @@ if(typeof gtag==='function'){document.addEventListener('click',function(e){var a
 <section id="order"><div class="wrap">
   <h2>Order a report</h2>
   <p class="sub">① Paste listing URL below &nbsp;→&nbsp; ② We email a Stripe payment link (usually within a few hours) &nbsp;→&nbsp; ③ Pay $49 — no account needed &nbsp;→&nbsp; ④ Report emailed within 24 hours of payment.</p>
-  <form class="f" data-formsubmit data-subject="Akiya Check order request">
+  <form class="f" id="order-form" data-formsubmit data-subject="Akiya Check order request">
     <label>Your email<input type="email" name="email" required placeholder="you@example.com"></label>
     <label>Product<select name="product"><option>Single Report ($49)</option><option>Compare 3 ($99)</option></select></label>
     <label>Listing URL(s) — one per line<textarea name="listing_urls" rows="3" required placeholder="https://suumo.jp/..."></textarea></label>
@@ -156,6 +156,7 @@ if(typeof gtag==='function'){document.addEventListener('click',function(e){var a
     <input type="hidden" name="_honey" style="display:none">
     <button class="btn primary" type="submit">Request my report</button>
     <div class="ok">Thanks — we've received your request. Check your inbox for the payment link (usually within a few hours).</div>
+    <div class="err">Sorry — the form couldn't send just now. Press the button again to retry, or email the listing URL to <a class="contact-mail" href="#">us</a>.</div>
   </form>
 </div></section>
 

@@ -48,6 +48,7 @@ table.checks th{width:30%;font-weight:600}
 form.f{display:grid;gap:12px;max-width:520px}
 form.f input,form.f textarea,form.f select{width:100%;padding:12px;border:1px solid #cfd5dd;border-radius:8px;font-size:16px;font-family:inherit}
 form.f label{font-size:14px;font-weight:600}
+form.f .err{display:none;background:#fdecec;border:1px solid #f3c2c2;padding:14px;border-radius:8px}
 form.f .ok{display:none;background:#e9f7ef;border:1px solid #bfe6cf;padding:14px;border-radius:8px}
 footer.site{border-top:1px solid var(--line);padding:32px 0;color:var(--muted);font-size:14px}
 footer.site a{color:var(--muted);margin-right:14px}
