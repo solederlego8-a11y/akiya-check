@@ -53,12 +53,13 @@ if(typeof gtag==='function'){document.addEventListener('click',function(e){var a
     </div>
     <div>
       <h2>Send me the checklist</h2>
-      <form class="f" data-formsubmit data-subject="Akiya Check – checklist request" data-autoresponse="Thanks for requesting the 12-Point Akiya Risk Checklist. Download it here: https://solederlego8-a11y.github.io/akiya-check/checklist/akiya-risk-checklist.pdf  — Each point includes the Japanese line to send the agent. When you have a specific listing, a $49 Akiya Check report answers these from the official zoning, hazard and transaction data for that exact lot: https://solederlego8-a11y.github.io/akiya-check/#pricing  Reply to this email with any question. (Information only — not legal or brokerage advice.)">
+      <form class="f" id="get-checklist" data-formsubmit data-subject="Akiya Check – checklist request" data-autoresponse="Thanks for requesting the 12-Point Akiya Risk Checklist. Download it here: https://solederlego8-a11y.github.io/akiya-check/checklist/akiya-risk-checklist.pdf  — Each point includes the Japanese line to send the agent. When you have a specific listing, a $49 Akiya Check report answers these from the official zoning, hazard and transaction data for that exact lot: https://solederlego8-a11y.github.io/akiya-check/#pricing  Reply to this email with any question. (Information only — not legal or brokerage advice.)">
         <label>Email<input type="email" name="email" required placeholder="you@example.com"></label>
         <label>Where are you looking? (optional)<input type="text" name="area" placeholder="e.g. Chiba, Nagano, anywhere rural"></label>
         <input type="hidden" name="_honey" style="display:none">
         <button class="btn primary" type="submit">Email me the checklist</button>
-        <div class="ok">Thanks — the checklist is on its way. If it doesn't arrive within an hour, check your spam folder.</div>
+        <div class="ok">Thanks — the checklist is on its way to your inbox (check your spam folder if it isn't there within an hour). You can also <a href="akiya-risk-checklist.pdf" target="_blank" rel="noopener"><strong>download the PDF now</strong></a>.</div>
+        <div class="err">Sorry — the form couldn't send just now. You can <a href="akiya-risk-checklist.pdf" target="_blank" rel="noopener"><strong>download the checklist PDF directly</strong></a>, or press the button again to retry.</div>
       </form>
       <p class="note" style="margin-top:14px">We email you the checklist and, occasionally, new guides. No sharing of your address, unsubscribe any time.</p>
     </div>
