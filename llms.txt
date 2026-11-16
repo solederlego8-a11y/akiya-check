@@ -1,0 +1,21 @@
+# Akiya Check
+
+> English risk reports for foreign buyers of akiya and cheap houses in Japan. Paste a Japanese property listing URL and get a report within 24 hours covering rebuild restrictions (saikenchiku-fuka), flood and landslide hazard zones, septic (jokaso) and propane, leasehold (shakuchiken), akiya-bank conditions, and the exact questions to ask the agent. $49 per property / $99 for three. Operated by the Akiya Check editorial team. Last updated: 2026-11-16.
+
+## Main pages
+
+- [Top / order](https://solederlego8-a11y.github.io/akiya-check/)
+- [Free pre-buy checklist](https://solederlego8-a11y.github.io/akiya-check/checklist/)
+- [Sample report](https://solederlego8-a11y.github.io/akiya-check/sample/)
+- [About](https://solederlego8-a11y.github.io/akiya-check/about/)
+- [Blog](https://solederlego8-a11y.github.io/akiya-check/blog/)
+
+## Articles (selected)
+
+- [Can foreigners buy akiya in Japan?](https://solederlego8-a11y.github.io/akiya-check/blog/can-foreigners-buy-akiya-japan.html)
+- [Rebuilding prohibited (saikenchiku-fuka) explained](https://solederlego8-a11y.github.io/akiya-check/blog/saikenchiku-fuka-rebuilding-prohibited.html)
+- [Japan hazard maps: flood, landslide and tsunami risk](https://solederlego8-a11y.github.io/akiya-check/blog/japan-hazard-map-akiya-flood-landslide-tsunami.html)
+- [Akiya bank conditions for foreigners](https://solederlego8-a11y.github.io/akiya-check/blog/akiya-bank-conditions-foreigners.html)
+- [Septic tank (jokaso) costs in Japan](https://solederlego8-a11y.github.io/akiya-check/blog/jokaso-septic-tank-cost-japan-house.html)
+- [Leasehold (shakuchiken) akiya](https://solederlego8-a11y.github.io/akiya-check/blog/shakuchiken-leasehold-akiya-japan.html)
+- [Questions to ask the agent before buying a house in Japan](https://solederlego8-a11y.github.io/akiya-check/blog/questions-to-ask-agent-before-buying-japan-house.html)
