@@ -1,11 +1,13 @@
 # Akiya Check
 
-> English risk reports for foreign buyers of akiya and cheap houses in Japan. Paste a Japanese property listing URL and get a report within 24 hours covering rebuild restrictions (saikenchiku-fuka), flood and landslide hazard zones, septic (jokaso) and propane, leasehold (shakuchiken), akiya-bank conditions, and the exact questions to ask the agent. $49 per property / $99 for three. Operated by the Akiya Check editorial team. Last updated: 2026-11-16.
+> English risk reports for foreign buyers of akiya and cheap houses in Japan. Paste a Japanese property listing URL and get a report within 24 hours covering rebuild restrictions (saikenchiku-fuka), flood and landslide hazard zones, septic (jokaso) and propane, leasehold (shakuchiken), akiya-bank conditions, and the exact questions to ask the agent. $49 per property / $99 for three. Operated by the Akiya Check editorial team. Last updated: 2026-11-17.
 
 ## Main pages
 
 - [Top / order](https://solederlego8-a11y.github.io/akiya-check/)
 - [Free pre-buy checklist](https://solederlego8-a11y.github.io/akiya-check/checklist/)
+- [True-cost worksheet](https://solederlego8-a11y.github.io/akiya-check/cost/)
+- [20 Japanese listing words cheat sheet](https://solederlego8-a11y.github.io/akiya-check/words/)
 - [Sample report](https://solederlego8-a11y.github.io/akiya-check/sample/)
 - [About](https://solederlego8-a11y.github.io/akiya-check/about/)
 - [Blog](https://solederlego8-a11y.github.io/akiya-check/blog/)
