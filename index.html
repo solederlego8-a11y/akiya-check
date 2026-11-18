@@ -1,26 +1,17 @@
 <!doctype html>
 <html lang="en">
 <head>
-<!-- ga4 -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-CX0ZYF5HN7"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-CX0ZYF5HN7', { anonymize_ip: true });
-</script>
-
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Akiya Check – Risk report before you buy a cheap house in Japan (akiya / empty house)</title>
 <meta name="description" content="Paste a Japanese property listing URL and get an English risk report within 24 hours: rebuild restrictions, flood and landslide zones, septic/propane, leasehold, akiya-bank conditions, and the exact questions to ask the agent. $49 per property.">
+
 <link rel="canonical" href="https://solederlego8-a11y.github.io/akiya-check/">
 <meta property="og:title" content="Akiya Check – Know the risks before you buy a cheap house in Japan">
 <meta property="og:description" content="An English risk report built from Japan's official zoning, hazard and transaction data. $49 per listing, delivered within 24 hours.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://solederlego8-a11y.github.io/akiya-check/">
 <meta property="og:image" content="https://solederlego8-a11y.github.io/akiya-check/assets/og-default.png">
-<link rel="stylesheet" href="assets/style.css">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Product","name":"Akiya Check – Single Report","description":"Pre-purchase risk report for one Japanese property listing, in English, built from official government datasets.","offers":{"@type":"Offer","price":"49","priceCurrency":"USD","availability":"https://schema.org/InStock","url":"https://solederlego8-a11y.github.io/akiya-check/#pricing"}}
 </script>
@@ -53,132 +44,212 @@ gtag('config', 'G-CX0ZYF5HN7', { anonymize_ip: true });
 <script>
 if(typeof gtag==='function'){document.addEventListener('click',function(e){var a=e.target&&e.target.closest&&e.target.closest('a[href]');if(!a||a.hasAttribute('data-cv-tracked'))return;var h=a.href||'';var has=function(s){return h.indexOf(s)>-1;};var asp=has('a8.net')?'a8':(has('rakuten.co.jp')||has('r10.to'))?'rakuten':(has('amazon.co.jp')||has('amzn.'))?'amazon':'';if(asp){gtag('event','affiliate_click',{asp:asp,link_url:h,link_text:(a.innerText||'').trim().slice(0,80),page_path:location.pathname});}else if(has('buy.stripe.com')){gtag('event','begin_checkout',{link_url:h,page_path:location.pathname});}},true);document.addEventListener('submit',function(e){var f=e.target;gtag('event','generate_lead',{form_id:f.id||f.getAttribute('data-subject')||f.action||'',page_path:location.pathname});},true);}
 </script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CX0ZYF5HN7"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-CX0ZYF5HN7',{anonymize_ip:true});</script>
+<style>
+:root{
+  --bg:#FAF9F6; --surface:#FFFFFF; --surface-2:#F1EFE9; --ink:#14202E; --muted:#5B6B7A;
+  --navy:#0F2A44; --navy-2:#163A5E; --line:#E3E0D8; --line-2:#D8D3C6;
+  --ok:#1F7A4D; --ok-bg:#EAF4EE; --warn:#8A6D00; --warn-bg:#FBF3D3; --risk:#B33A1F; --risk-bg:#FBEDE8; --unknown:#5B6B7A; --unknown-bg:#EEF0F2;
+  --radius:16px; --radius-s:10px; --max:1120px;
+  --fs-hero:clamp(2.4rem,6vw,4.2rem); --fs-h2:clamp(1.7rem,3.4vw,2.4rem); --fs-lead:clamp(1.05rem,1.6vw,1.25rem);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Georgia,'Times New Roman',serif;font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+h1,h2,h3,.sans{font-family:system-ui,-apple-system,'Segoe UI',sans-serif}
+a{color:var(--navy)} a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--navy);outline-offset:2px}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+header.site{position:sticky;top:0;z-index:20;background:rgba(250,249,246,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:14px;padding-bottom:14px}
+.logo{font-family:system-ui,sans-serif;font-weight:800;font-size:1.25rem;text-decoration:none;color:var(--navy);letter-spacing:-.02em}
+.logo span{color:var(--muted);font-weight:500}
+nav.main{display:flex;gap:18px;flex-wrap:wrap;font-family:system-ui,sans-serif;font-size:.92rem}
+nav.main a{text-decoration:none;color:var(--ink)} nav.main a:hover{text-decoration:underline}
+nav.main a.cta{background:var(--navy);color:#fff;padding:8px 14px;border-radius:999px}
+.btn{display:inline-block;font-family:system-ui,sans-serif;font-weight:700;text-decoration:none;padding:14px 22px;border-radius:999px;border:1px solid var(--navy)}
+.btn.primary{background:var(--navy);color:#fff}.btn.primary:hover{background:var(--navy-2)}
+.btn.secondary{background:transparent;color:var(--navy)}
+.btn.small{padding:10px 16px;font-size:.92rem}
+section{padding:72px 0} section.alt{background:var(--surface-2)}
+h2{font-size:var(--fs-h2);line-height:1.15;letter-spacing:-.02em;margin:0 0 12px;color:var(--navy)}
+.sub{color:var(--muted);max-width:640px;margin:0 0 32px;font-size:1.02rem}
+/* Hero */
+.hero{padding:56px 0 72px}
+.hero-grid{display:grid;gap:36px}
+@media(min-width:900px){.hero-grid{grid-template-columns:1.05fr .95fr;align-items:start}}
+.eyebrow{font-family:system-ui,sans-serif;font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0 0 16px}
+h1{font-size:var(--fs-hero);line-height:1.02;letter-spacing:-.03em;margin:0 0 20px;color:var(--navy)}
+.lead{font-size:var(--fs-lead);color:#334155;margin:0 0 24px;max-width:540px}
+.hero-meta{display:flex;gap:10px;flex-wrap:wrap;font-family:system-ui,sans-serif;font-size:.9rem;margin:0 0 24px}
+.hero-meta span{background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:7px 12px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px}
+.sample-link{font-size:.92rem;color:var(--muted)}
+.trust{display:grid;grid-template-columns:1fr 1fr;gap:8px 16px;margin-top:28px;padding-top:20px;border-top:1px solid var(--line);font-family:system-ui,sans-serif;font-size:.88rem}
+.trust span::before{content:"✓ ";color:var(--ok);font-weight:800}
+/* Report mock — signature */
+.report-card{background:var(--surface);border:1px solid var(--line-2);border-radius:var(--radius);box-shadow:0 18px 40px rgba(15,42,68,.10);overflow:hidden}
+.report-head{background:var(--navy);color:#fff;padding:20px 22px;display:flex;justify-content:space-between;align-items:center;gap:16px}
+.report-head .label{font-family:system-ui,sans-serif;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;opacity:.75;margin:0}
+.report-head .addr{font-family:system-ui,sans-serif;font-weight:700;margin:2px 0 0;font-size:1rem}
+.grade{text-align:center;background:#fff;color:var(--navy);border-radius:12px;padding:10px 14px;min-width:92px}
+.grade b{display:block;font-size:2rem;line-height:1;font-family:system-ui,sans-serif}
+.grade small{font-family:system-ui,sans-serif;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.scorebar{padding:16px 22px 4px;font-family:system-ui,sans-serif;font-size:.85rem;display:flex;justify-content:space-between}
+.meter{height:8px;background:var(--unknown-bg);border-radius:999px;margin:6px 22px 16px;overflow:hidden}
+.meter i{display:block;height:100%;width:62%;background:var(--navy);border-radius:999px}
+.rows{list-style:none;margin:0;padding:0 22px 8px}
+.rows li{display:flex;justify-content:space-between;gap:12px;padding:11px 0;border-top:1px solid var(--line);font-size:.95rem}
+.rows li.deal{font-weight:700}
+.tag{font-family:system-ui,sans-serif;font-size:.72rem;font-weight:800;letter-spacing:.06em;padding:4px 8px;border-radius:999px;white-space:nowrap;height:fit-content}
+.tag.ok{background:var(--ok-bg);color:var(--ok)} .tag.warn{background:var(--warn-bg);color:var(--warn)}
+.tag.risk{background:var(--risk-bg);color:var(--risk)} .tag.unknown{background:var(--unknown-bg);color:var(--unknown)}
+.report-foot{padding:14px 22px 20px;color:var(--muted);font-size:.88rem;border-top:1px solid var(--line);background:#FCFBF8}
+/* Grids */
+.grid{display:grid;gap:18px} @media(min-width:760px){.grid.c3{grid-template-columns:repeat(3,1fr)}}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:24px}
+.card h3{margin:0 0 8px;font-size:1.08rem;color:var(--navy)} .card p{margin:0;color:#3A4756}
+.step{display:flex;gap:16px}.step .n{font-family:system-ui,sans-serif;font-weight:800;font-size:1.6rem;color:var(--navy);background:var(--surface-2);width:48px;height:48px;border-radius:50%;display:grid;place-items:center;flex:none}
+/* Bento checks */
+.bento{display:grid;gap:14px}
+@media(min-width:760px){.bento{grid-template-columns:repeat(3,1fr)} .bento .wide{grid-column:span 2}}
+.bento .card p{font-size:.95rem}
+/* Pricing */
+.price{font-family:system-ui,sans-serif;font-size:2.1rem;font-weight:800;color:var(--navy);margin:8px 0}
+.price small{font-size:.95rem;font-weight:500;color:var(--muted)}
+.card ul{padding-left:18px;margin:12px 0 18px}.badge{font-family:system-ui,sans-serif;font-size:.72rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;background:var(--navy);color:#fff;padding:5px 9px;border-radius:999px}
+.disc{color:var(--muted);font-size:.9rem;margin-top:18px}
+/* Form */
+form.f{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:26px;display:grid;gap:16px;max-width:720px}
+form.f label{font-family:system-ui,sans-serif;font-weight:600;font-size:.94rem;display:grid;gap:6px}
+form.f input,form.f select,form.f textarea{font:inherit;padding:12px;border:1px solid var(--line-2);border-radius:var(--radius-s);background:#fff;width:100%}
+.ok,.err{display:none}
+/* FAQ */
+details{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-s);padding:16px 18px;margin-bottom:10px}
+summary{font-family:system-ui,sans-serif;font-weight:700;cursor:pointer;color:var(--navy)}
+.newsletter{border:1px solid var(--line);border-radius:var(--radius);background:var(--surface);padding:26px;max-width:760px;margin:0 auto}
+footer.site{border-top:1px solid var(--line);padding:32px 0 48px;font-family:system-ui,sans-serif;font-size:.92rem}
+footer.site .wrap{display:flex;gap:18px;flex-wrap:wrap} footer.site p{flex-basis:100%}
+.fade{animation:fade .6s ease both}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+</style>
 </head>
 <body>
 <header class="site"><div class="wrap">
-  <a class="logo" href="./" title="Akiya (空き家) = empty house in Japanese">Akiya<span>Check</span></a>
-  <nav class="main">
-    <a href="#how">How it works</a>
-    <a href="#checks">What we check</a>
-    <a href="#pricing">Pricing</a>
-    <a href="blog/">Blog &amp; Guides</a><a href="tools/japan-hazard-map-english/">Hazard map tool</a><a href="blog/akiya-bank-conditions-foreigners.html#prefecture">Akiya bank by prefecture</a><a href="about/">About</a>
-    <a class="cta" href="checklist/">Free checklist</a>
-  </nav>
+<a class="logo" href="./">Akiya<span>Check</span></a>
+<nav class="main"><a href="#how">How it works</a><a href="#checks">What we check</a><a href="#pricing">Pricing</a><a href="blog/">Blog &amp; Guides</a><a href="tools/japan-hazard-map-english/">Hazard map tool</a><a href="about/">About</a><a class="cta" href="checklist/">Free checklist</a></nav>
 </div></header>
 
-<section class="hero"><div class="wrap">
-  <p class="eyebrow" style="color:var(--accent);font-weight:700;margin:0 0 8px;letter-spacing:.3px">Pre-purchase risk reports for Japan's empty &amp; cheap houses — known in Japan as <em>akiya</em> (空き家)</p>
-  <h1>Know what's wrong with that ¥3,000,000 house<br>before you wire the money.</h1>
-  <p class="lead">Paste a Japanese listing URL. Within 24 hours you get an English risk report built from Japan's official zoning, hazard and transaction data — and the exact questions to send the agent.</p>
-  <div class="actions">
-    <a class="btn primary" data-buy="single" href="#order">Get a report — $49</a>
-    <a class="btn secondary" href="checklist/">Free 12-point checklist</a>
-  </div>
-  <p style="margin:.6rem 0 0;font-size:.88rem;color:var(--muted,#64748b)"><a href="sample/" style="color:inherit">See a sample report →</a> &nbsp;·&nbsp; Scored A (safest) to E (highest risk)</p>
-  <div class="trust">
-    <span>✔ Official MLIT &amp; GSI datasets</span>
-    <span>✔ Not affiliated with any agent or seller</span>
-    <span>✔ Unknowns stay unknown — we never guess</span>
-    <span>✔ Full refund if we get a fact wrong</span>
-  </div>
-</div></section>
+<section class="hero"><div class="wrap"><div class="hero-grid fade">
+<div>
+<p class="eyebrow">Pre-purchase risk reports — Akiya (空き家), Japan</p>
+<h1>Know what's wrong with that ¥3,000,000 house before you wire the money.</h1>
+<p class="lead">For foreign buyers of cheap houses in Japan. Paste a Japanese listing URL — within 24 hours you get an English risk report built from Japan's official zoning, hazard and transaction data, and the exact questions to send the agent.</p>
+<div class="hero-meta"><span><strong>$49</strong> per property</span><span>Delivered in <strong>24 hours</strong></span><span>No account needed</span></div>
+<div class="actions"><a class="btn primary" data-buy="single" href="#order">Get a report — $49</a><a class="btn secondary" href="checklist/">Free 12-point checklist</a></div>
+<p class="sample-link"><a href="sample/">See a sample report →</a> &nbsp;·&nbsp; Scored A (safest) to E (highest risk)</p>
+<div class="trust"><span>Official MLIT &amp; GSI datasets</span><span>Not affiliated with any agent or seller</span><span>Unknowns stay unknown — we never guess</span><span>Full refund if we get a fact wrong</span></div>
+</div>
+<aside class="report-card" aria-label="Sample risk report summary">
+<div class="report-head"><div><p class="label">Risk Report — Sample</p><p class="addr">¥3,000,000 house · Listing example</p></div><div class="grade"><b>C</b><small>Grade</small></div></div>
+<div class="scorebar"><span>Risk score</span><strong>62 / 100</strong></div><div class="meter"><i></i></div>
+<ul class="rows">
+<li class="deal"><span>Deal-breaker first: Can you rebuild? — 再建築不可</span><span class="tag risk">RISK</span></li>
+<li><span>Flood depth (maximum scale)</span><span class="tag warn">CAUTION</span></li>
+<li><span>Landslide warning zone</span><span class="tag ok">OK</span></li>
+<li><span>Water / sewer / gas</span><span class="tag ok">OK</span></li>
+<li><span>Septic tank (浄化槽) maintenance</span><span class="tag warn">CAUTION</span></li>
+<li><span>Leasehold (借地権) / disclosure (告知事項)</span><span class="tag unknown">UNKNOWN</span></li>
+</ul>
+<p class="report-foot">Deal-breakers first, then costs and a bilingual question list for the agent. Unknown means the listing didn't say — we tell you what to ask. <a href="sample/">See full sample →</a></p>
+</aside>
+</div></div></section>
 
 <section><div class="wrap">
-  <h2>Why cheap houses in Japan are cheap</h2>
-  <p class="sub">The listing usually tells you — in four kanji you can't read. These are the things that turn a bargain into a liability.</p>
-  <div class="grid c3">
-    <div class="card"><h3>再建築不可 — you can't rebuild</h3><p>If the lot doesn't touch a 4 m road for at least 2 m, you cannot replace the house if it burns or collapses. Common in old towns, almost never explained to foreign buyers.</p></div>
-    <div class="card"><h3>Hazard maps are Japanese-only</h3><p>Flood depth, landslide warning zones and tsunami inundation areas are published by the government — in Japanese, tile by tile. We check the exact coordinates of the lot. Want to look yourself first? Try our free <a href="tools/japan-hazard-map-english/">Japan hazard map in English</a> tool.</p></div>
-    <div class="card"><h3>Septic tanks, propane, leasehold</h3><p>浄化槽 maintenance, LPG contracts, 借地権 ground rent and 告知事項 (disclosure matters) change what the house really costs. We translate them into a running-cost view.</p></div>
-  </div>
-</div></section>
+<h2>Why cheap houses in Japan are cheap</h2>
+<p class="sub">The listing usually tells you — in four kanji you can't read. These are the things that turn a bargain into a liability.</p>
+<div class="grid c3">
+<div class="card"><h3>再建築不可 — you can't rebuild</h3><p>If the lot doesn't touch a 4 m road for at least 2 m, you cannot replace the house if it burns or collapses. Common in old towns, almost never explained to foreign buyers.</p></div>
+<div class="card"><h3>Hazard maps are Japanese-only</h3><p>Flood depth, landslide warning zones and tsunami inundation areas are published by the government — in Japanese, tile by tile. We check the exact coordinates of the lot. Try our free <a href="tools/japan-hazard-map-english/">Japan hazard map in English</a> tool.</p></div>
+<div class="card"><h3>Septic tanks, propane, leasehold</h3><p>浄化槽 maintenance, LPG contracts, 借地権 ground rent and 告知事項 (disclosure matters) change what the house really costs. We translate them into a running-cost view.</p></div>
+</div></div></section>
 
-<section id="how" style="background:var(--soft)"><div class="wrap">
-  <h2>How it works</h2>
-  <p class="sub">No account, no calls. One listing in, one report out.</p>
-  <div class="grid c3">
-    <div class="card step"><div class="n">1</div><div><h3>Send the listing</h3><p>Pay and paste the listing URL (or the listing text plus address if the page blocks robots).</p></div></div>
-    <div class="card step"><div class="n">2</div><div><h3>We run the checks</h3><p>Geocode the lot, query the official zoning, hazard, population and transaction datasets, and parse the listing for the risk keywords.</p></div></div>
-    <div class="card step"><div class="n">3</div><div><h3>Read, then ask</h3><p>You get an emailed report with a 0–100 risk score (higher = more risk) and an A–E grade (A = safest), deal-breakers first, cost estimates, and a bilingual question list you can forward to the agent as-is.</p></div></div>
-  </div>
-</div></section>
+<section id="how" class="alt"><div class="wrap">
+<h2>How it works</h2><p class="sub">No account, no calls. One listing in, one report out.</p>
+<div class="grid c3">
+<div class="card step"><div class="n">1</div><div><h3>Send the listing</h3><p>Pay and paste the listing URL (or the listing text plus address if the page blocks robots).</p></div></div>
+<div class="card step"><div class="n">2</div><div><h3>We run the checks</h3><p>Geocode the lot, query the official zoning, hazard, population and transaction datasets, and parse the listing for the risk keywords.</p></div></div>
+<div class="card step"><div class="n">3</div><div><h3>Read, then ask</h3><p>You get an emailed report with a 0–100 risk score (higher = more risk) and an A–E grade (A = safest), deal-breakers first, cost estimates, and a bilingual question list you can forward to the agent as-is.</p></div></div>
+</div></div></section>
 
 <section id="checks"><div class="wrap">
-  <h2>What the report checks</h2>
-  <p class="sub">Every item is marked <span class="tag ok">OK</span><span class="tag warn">CAUTION</span><span class="tag risk">RISK</span> or <span class="tag unknown">UNKNOWN</span>. Unknown means the listing didn't say — and we tell you what to ask.</p>
-  <table class="checks">
-    <tr><th>Can you rebuild?</th><td>再建築不可 (rebuilding prohibited) · road frontage (接道) · setback (セットバック) · urbanization control area (市街化調整区域) · land-use zone, building-coverage and floor-area ratios (用途地域・建蔽率・容積率)</td></tr>
-    <tr><th>Natural hazards</th><td>Maximum-scale flood depth · tsunami inundation · landslide warning zones · liquefaction tendency · designated disaster hazard districts — from MLIT's Real Estate Information Library at the lot's coordinates</td></tr>
-    <tr><th>Utilities &amp; tenure</th><td>Public water vs. well · public sewer vs. septic tank (浄化槽) · city gas vs. propane · freehold vs. leasehold (借地権) · disclosure matters (告知事項) · akiya-bank conditions</td></tr>
-    <tr><th>Costs</th><td>Listing price · one-off acquisition costs (range) · fixed-asset tax (range) · pre-1981 seismic standard flag</td></tr>
-    <tr><th>Location &amp; exit</th><td>Population trend in the 250 m mesh · recorded nearby transactions · geocoded position for your own map checks</td></tr>
-    <tr><th>Questions for the agent</th><td>Auto-generated from every UNKNOWN item, in English and Japanese, ready to paste into an email</td></tr>
-  </table>
-  <p style="margin-top:18px"><a class="btn secondary small" href="sample/">See a sample report →</a></p>
+<h2>What the report checks</h2>
+<p class="sub">Every item is marked <span class="tag ok">OK</span> <span class="tag warn">CAUTION</span> <span class="tag risk">RISK</span> or <span class="tag unknown">UNKNOWN</span>. Unknown means the listing didn't say — and we tell you what to ask.</p>
+<div class="bento">
+<div class="card wide"><h3>Can you rebuild?</h3><p>再建築不可 (rebuilding prohibited) · road frontage (接道) · setback (セットバック) · urbanization control area (市街化調整区域) · land-use zone, building-coverage and floor-area ratios (用途地域・建蔽率・容積率)</p></div>
+<div class="card"><h3>Costs</h3><p>Listing price · one-off acquisition costs (range) · fixed-asset tax (range) · pre-1981 seismic standard flag</p></div>
+<div class="card wide"><h3>Natural hazards</h3><p>Maximum-scale flood depth · tsunami inundation · landslide warning zones · liquefaction tendency · designated disaster hazard districts — from MLIT's Real Estate Information Library at the lot's coordinates</p></div>
+<div class="card"><h3>Location &amp; exit</h3><p>Population trend in the 250 m mesh · recorded nearby transactions · geocoded position for your own map checks</p></div>
+<div class="card wide"><h3>Utilities &amp; tenure</h3><p>Public water vs. well · public sewer vs. septic tank (浄化槽) · city gas vs. propane · freehold vs. leasehold (借地権) · disclosure matters (告知事項) · akiya-bank conditions</p></div>
+<div class="card"><h3>Questions for the agent</h3><p>Auto-generated from every UNKNOWN item, in English and Japanese, ready to paste into an email</p></div>
+</div>
+<p style="margin-top:18px"><a class="btn secondary small" href="sample/">See a sample report →</a></p>
 </div></section>
 
-<section style="background:var(--soft)"><div class="wrap">
-  <h2>A tool gives you a map. We give you an answer.</h2>
-  <p class="sub">Map-and-database platforms (like Japan Property Research) are excellent for browsing zoning and hazard layers yourself &mdash; but they are subscription tools built for agents and investors researching many properties, and they do not read the one listing you are actually about to buy.</p>
-  <div class="grid c3">
-    <div class="card"><h3>No account, no map to learn</h3><p>Paste one URL, get one report by email in 24 hours. You do not log in, choose a plan, or interpret map layers yourself.</p></div>
-    <div class="card"><h3>We read the listing text itself</h3><p>再建築不可, 淨化槽, 借地権, 告知事項 &mdash; these are facts stated in the listing, not on any map. Our engine parses the actual text and flags them alongside the official zoning and hazard data.</p></div>
-    <div class="card"><h3>Pay once, not monthly</h3><p>$49 per property, no subscription to remember to cancel. If we state a fact that turns out to be wrong, you get a full refund &mdash; something map subscriptions do not offer.</p></div>
-  </div>
-  <p style="margin-top:14px"><a href="blog/akiya-check-vs-japan-property-research.html">See the full comparison &rarr;</a></p>
+<section class="alt"><div class="wrap">
+<h2>A tool gives you a map. We give you an answer.</h2>
+<p class="sub">Map-and-database platforms are excellent for browsing zoning and hazard layers yourself — but they are subscription tools built for agents and investors, and they do not read the one listing you are actually about to buy.</p>
+<div class="grid c3">
+<div class="card"><h3>No account, no map to learn</h3><p>Paste one URL, get one report by email in 24 hours. You do not log in, choose a plan, or interpret map layers yourself.</p></div>
+<div class="card"><h3>We read the listing text itself</h3><p>再建築不可, 浄化槽, 借地権, 告知事項 — these are facts stated in the listing, not on any map. Our engine parses the actual text and flags them alongside the official zoning and hazard data.</p></div>
+<div class="card"><h3>Pay once, not monthly</h3><p>$49 per property, no subscription to remember to cancel. If we state a fact that turns out to be wrong, you get a full refund — something map subscriptions do not offer.</p></div>
+</div></div></section>
+
+<section id="pricing"><div class="wrap">
+<h2>Pricing</h2><p class="sub">Pay per property. No subscription.</p>
+<div class="grid c3">
+<div class="card"><h3>Single Report</h3><div class="price">$49 <small>/ property</small></div><ul><li>Full risk report by email (PDF on request)</li><li>Deal-breakers, hazards, costs, exit</li><li>Bilingual question list for the agent</li><li>Delivered within 24 hours</li></ul><a class="btn primary" data-buy="single" href="#order">Order a report</a></div>
+<div class="card"><span class="badge">Best for shortlists</span><h3>Compare 3</h3><div class="price">$99 <small>/ 3 properties</small></div><ul><li>Three full reports</li><li>Side-by-side comparison &amp; ranking</li><li>Delivered within 48 hours</li></ul><a class="btn primary" data-buy="compare" href="#order">Compare 3 listings</a></div>
+<div class="card"><h3>12-Point Checklist</h3><div class="price">Free</div><ul><li>The 12 questions that catch most akiya problems</li><li>Japanese phrases to send the agent</li><li>Sent by email</li></ul><a class="btn secondary" href="checklist/">Get the checklist</a></div>
+</div>
+<p class="disc">Prices in USD. Card payment via Stripe. If we state a fact that turns out to be wrong, you get a full refund.</p>
 </div></section>
 
-<section id="pricing" class="pricing" style="background:var(--soft)"><div class="wrap">
-  <h2>Pricing</h2>
-  <p class="sub">Pay per property. No subscription.</p>
-  <div class="grid c3">
-    <div class="card"><h3>Single Report</h3><div class="price">$49 <small>/ property</small></div>
-      <ul><li>Full risk report by email (PDF on request)</li><li>Deal-breakers, hazards, costs, exit</li><li>Bilingual question list for the agent</li><li>Delivered within 24 hours</li></ul>
-      <a class="btn primary" data-buy="single" href="#order">Order a report</a></div>
-    <div class="card"><span class="badge">Best for shortlists</span><h3>Compare 3</h3><div class="price">$99 <small>/ 3 properties</small></div>
-      <ul><li>Three full reports</li><li>Side-by-side comparison &amp; ranking</li><li>Delivered within 48 hours</li></ul>
-      <a class="btn primary" data-buy="compare" href="#order">Compare 3 listings</a></div>
-    <div class="card"><h3>12-Point Checklist</h3><div class="price">Free</div>
-      <ul><li>The 12 questions that catch most akiya problems</li><li>Japanese phrases to send the agent</li><li>Sent by email</li></ul>
-      <a class="btn secondary" href="checklist/">Get the checklist</a></div>
-  </div>
-  <p class="disc">Prices in USD. Card payment via Stripe. If we state a fact that turns out to be wrong, you get a full refund.</p>
+<section id="order" class="alt"><div class="wrap">
+<h2>Order a report</h2>
+<p class="sub">① Paste listing URL below → ② We email a Stripe payment link (usually within a few hours) → ③ Pay $49 — no account needed → ④ Report emailed within 24 hours of payment.</p>
+<form class="f" id="order-form" data-formsubmit data-subject="Akiya Check order request">
+<label>Your email<input type="email" name="email" required placeholder="you@example.com"></label>
+<label>Product<select name="product"><option>Single Report ($49)</option><option>Compare 3 ($99)</option></select></label>
+<label>Listing URL(s) — one per line<textarea name="listing_urls" rows="3" required placeholder="https://suumo.jp/..."></textarea></label>
+<label>Anything specific you're worried about? (optional)<textarea name="notes" rows="2"></textarea></label>
+<input type="hidden" name="_honey" style="display:none">
+<button class="btn primary" type="submit">Request my report</button>
+<div class="ok">Thanks — we've received your request. Check your inbox for the payment link (usually within a few hours).</div>
+<div class="err">Sorry — the form couldn't send just now. Press the button again to retry, or email the listing URL to <a class="contact-mail" href="#">us</a>.</div>
+</form>
 </div></section>
 
-<section id="order"><div class="wrap">
-  <h2>Order a report</h2>
-  <p class="sub">① Paste listing URL below &nbsp;→&nbsp; ② We email a Stripe payment link (usually within a few hours) &nbsp;→&nbsp; ③ Pay $49 — no account needed &nbsp;→&nbsp; ④ Report emailed within 24 hours of payment.</p>
-  <form class="f" id="order-form" data-formsubmit data-subject="Akiya Check order request">
-    <label>Your email<input type="email" name="email" required placeholder="you@example.com"></label>
-    <label>Product<select name="product"><option>Single Report ($49)</option><option>Compare 3 ($99)</option></select></label>
-    <label>Listing URL(s) — one per line<textarea name="listing_urls" rows="3" required placeholder="https://suumo.jp/..."></textarea></label>
-    <label>Anything specific you're worried about? (optional)<textarea name="notes" rows="2"></textarea></label>
-    <input type="hidden" name="_honey" style="display:none">
-    <button class="btn primary" type="submit">Request my report</button>
-    <div class="ok">Thanks — we've received your request. Check your inbox for the payment link (usually within a few hours).</div>
-    <div class="err">Sorry — the form couldn't send just now. Press the button again to retry, or email the listing URL to <a class="contact-mail" href="#">us</a>.</div>
-  </form>
+<section class="faq"><div class="wrap">
+<h2>Questions</h2>
+<details open><summary>Can foreigners buy an akiya in Japan?</summary><p>Yes. Japan has no nationality or residency requirement for owning land or houses. Some akiya-bank (municipal) listings attach residency, age or renovation conditions — the report flags those.</p></details>
+<details><summary>Is this legal or real-estate brokerage advice?</summary><p>No. Akiya Check is an information service. We summarize public government data and the listing text so you can ask better questions. We do not negotiate, mediate, or give legal or tax advice.</p></details>
+<details><summary>Which listing sites do you support?</summary><p>Any Japanese listing page — SUUMO, AtHome, LIFULL HOME'S, municipal akiya banks, regional agents. If a page cannot be fetched, paste the listing text and the address instead.</p></details>
+<details><summary>Where does the data come from?</summary><p>Zoning, hazard, population and transaction layers come from MLIT's Real Estate Information Library. Geocoding uses the Geospatial Information Authority of Japan. Listing facts come from the listing text itself. Every report lists the status of each source.</p></details>
+<details><summary>What if the report is wrong?</summary><p>If we state a fact that turns out to be wrong, we refund the full price. Items the listing does not state are reported as UNKNOWN, never guessed.</p></details>
 </div></section>
 
-<section class="faq" style="background:var(--soft)"><div class="wrap">
-  <h2>Questions</h2>
-  <details open><summary>Can foreigners buy an akiya in Japan?</summary><p>Yes. Japan has no nationality or residency requirement for owning land or houses. Some akiya-bank (municipal) listings attach residency, age or renovation conditions — the report flags those.</p></details>
-  <details><summary>Is this legal or real-estate brokerage advice?</summary><p>No. Akiya Check is an information service. We summarize public government data and the listing text so you can ask better questions. We do not negotiate, mediate, or give legal or tax advice.</p></details>
-  <details><summary>Which listing sites do you support?</summary><p>Any Japanese listing page — SUUMO, AtHome, LIFULL HOME'S, municipal akiya banks, regional agents. If a page cannot be fetched, paste the listing text and the address instead.</p></details>
-  <details><summary>Where does the data come from?</summary><p>Zoning, hazard, population and transaction layers come from MLIT's Real Estate Information Library (不動産情報ライブラリ). Geocoding uses the Geospatial Information Authority of Japan. Listing facts come from the listing text itself. Every report lists the status of each source.</p></details>
-  <details><summary>What if the report is wrong?</summary><p>If we state a fact that turns out to be wrong, we refund the full price. Items the listing does not state are reported as UNKNOWN, never guessed.</p></details>
-</div></section>
+<section style="padding-top:0"><div class="wrap"><div class="newsletter">
+<h2 style="font-size:1.25rem">Free weekly email: 5 cheap houses in Japan, with the red flags checked</h2>
+<p>Each week we pick five akiya listings and note what Japan's official hazard, zoning and road-access data show for each one — in plain English. No spam, unsubscribe anytime.</p>
+<p style="font-size:.9rem;color:var(--muted)">Examples only — not recommendations. We're not affiliated with any agent or seller, and we don't mediate purchases.</p>
+<iframe src="https://naokita.substack.com/embed" width="100%" height="150" style="border:1px solid #eee;background:#fff;border-radius:8px" frameborder="0" scrolling="no" title="Subscribe to the weekly akiya email"></iframe>
+</div></div></section>
 
-<!-- newsletter-1013 -->
-<section class="wrap" style="margin:2.5rem auto;padding:1.25rem 1.25rem 1rem;border:1px solid #d9e2e5;border-radius:12px;background:#f7fafb;max-width:760px">
-  <h2 style="margin:0 0 .4rem;font-size:1.2rem">Free weekly email: 5 cheap houses in Japan, with the red flags checked</h2>
-  <p style="margin:0 0 .8rem">Each week we pick five akiya listings and note what Japan's official hazard, zoning and road-access data show for each one — in plain English. No spam, unsubscribe anytime.</p>
-  <p style="margin:0 0 .8rem;font-size:.9rem;color:#44555c">Examples only — not recommendations. We're not affiliated with any agent or seller, and we don't mediate purchases.</p>
-  <iframe src="https://naokita.substack.com/embed" width="100%" height="150" style="border:1px solid #eee;background:#fff;border-radius:8px" frameborder="0" scrolling="no" title="Subscribe to the weekly akiya email"></iframe>
-</section>
 <footer class="site"><div class="wrap">
-  <a href="legal/">Terms, privacy &amp; refunds</a><a href="legal/#tokushoho">特定商取引法に基づく表記</a><a href="blog/">Blog &amp; Guides</a><a href="tools/japan-hazard-map-english/">Hazard map tool</a><a href="blog/akiya-bank-conditions-foreigners.html#prefecture">Akiya bank by prefecture</a><a href="about/">About</a><a href="checklist/">Free checklist</a>
-  <p class="disc">Akiya Check reports are automated summaries of publicly available Japanese government data and listing text, provided for information only. They are not legal, tax, or real-estate brokerage advice. Boundaries in hazard and zoning datasets are approximate; always confirm with the listing agent, the municipality, and a licensed professional before purchasing.</p>
+<a href="legal/">Terms, privacy &amp; refunds</a><a href="blog/">Blog &amp; Guides</a><a href="tools/japan-hazard-map-english/">Hazard map tool</a><a href="about/">About</a><a href="checklist/">Free checklist</a>
+<p class="disc">Akiya Check reports are automated summaries of publicly available Japanese government data and listing text, provided for information only. They are not legal, tax, or real-estate brokerage advice. Boundaries in hazard and zoning datasets are approximate; always confirm with the listing agent, the municipality, and a licensed professional before purchasing.</p>
 </div></footer>
 <script src="assets/config.js"></script>
 <script src="assets/site.js"></script>
